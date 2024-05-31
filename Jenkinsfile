@@ -13,7 +13,7 @@ environment {
             echo "---------build completed ----------"
         } 
     }
-    }
+    
 
 stage("test"){
         steps{
