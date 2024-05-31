@@ -6,6 +6,7 @@ pipeline {
 environment {
     PATH = "/opt/apache-maven-3.9.4/bin:$PATH"
     }
+    stages{
        stage("build"){
         steps {
             echo "------- build started --------"
@@ -25,12 +26,13 @@ stage("test"){
 
     stage('SonarQube analysis'){
     environment {
-      scannerHome = tool 'namg-sonar-scanner' //sonar scanner name should be same as what we have defined in the tools
+      scannerHome = tool 'Sonar-scanner' //sonar scanner name should be same as what we have defined in the tools
     }
     steps {                                 // in the steps we are adding our sonar cube server that is with Sonar Cube environment.
-    withSonarQubeEnv('namg-sonarqube-server') {
+    withSonarQubeEnv('sonarqube-server') {
        sh "${scannerHome}/bin/sonar-scanner" // This is going to communicate with our sonar cube server and send the analysis report.
         }
       }
+    }
     }
 }
