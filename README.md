@@ -1,4 +1,4 @@
-##~ Nam-trend application ~##
+##~ Nam-trend application ~###
 
 This is a small applicaiton which contains main and test folders.  
 Main contains application code.  
