@@ -25,9 +25,6 @@ stage("test"){
         }
     }
 
-    
-}
-
 stage("Jar Publish") {
         steps {
             script {
@@ -53,4 +50,7 @@ stage("Jar Publish") {
             }
         }   
     } 
+    }
 }
+    
+    
