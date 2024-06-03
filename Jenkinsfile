@@ -1,4 +1,5 @@
 def registry = 'https://devopspra.jfrog.io'
+
 pipeline {
     agent {label 'maven'}
 
